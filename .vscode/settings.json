@@ -1,0 +1,10 @@
+{
+    "extensions.closeExtensionDetailsOnViewChange": false,
+    "remote.extensionKind": {
+
+        "pub.name": [
+            "ui"
+        ]
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
