@@ -19,6 +19,9 @@ h2{
     font-size: 2.3rem;
     font-weight: 100;
 }
+p{
+    font-size: 1.15rem;
+}
 body{
     margin: 0;
     padding: 0;
@@ -177,6 +180,15 @@ header .search-page .top-list p{
 
 header .intro{
     padding: 60px 15px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+header .intro div:nth-child(1){
+    width: 70%;
+}
+header .intro .img{
+    display: none;
 }
 header .intro h2{
     font-size: 3.5rem;
@@ -237,14 +249,22 @@ header .trusted-by .other-logos{
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 15px;
 }
 .sec1-buttons .sign-up{
     display: none;
+    padding: 10px;
+    background-color: var(--button-green);
+    border-radius: 25px;
+    color: white;
+    width: 50%;
+    text-align: center;
+
 }
 .sec1-buttons .hire{
     display: block;
     width: 95%;
-    padding: 5px;
+    padding: 10px;
     text-decoration: none;
     color: var(--button-green);
     border-radius: 30px;
@@ -317,6 +337,7 @@ header .trusted-by .other-logos{
     align-items: baseline;
     gap: 15px;
     padding-bottom: 10px;
+    font-size: 1.15rem;
 }
 .section3 > div li i{
     color: var(--letter-greenLight);
@@ -329,15 +350,19 @@ header .trusted-by .other-logos{
 }
 /* Section 4 */
 .section4{
-    width: 100%;
+    margin-top: 60px;
     padding: 25px 15px;
+    background: url(https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_scale/brontes/delivery-models/find-talent-mobile.jpg) no-repeat top/ cover;
+    color: white;
 }
 .section4 .header h2{
     margin-top: 70px;
+    font-size: 3rem;
 }
 .section4 .cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 10px;
 }
 .section4 .cards .card{
@@ -347,21 +372,19 @@ header .trusted-by .other-logos{
     padding: 15px;
     color: var(--letter-white);
 }
-.section4 .cards .card .top{
 
-}
 .section4 .cards .card .sub{
     text-align: end;
+}
+
+/* Merged section */
+.merged{
+    display: flex;
+    flex-direction: column;
 }
 /* Section 5 */
 .section5{
     padding: 10px 15px 50px;
-}
-.section5 h2{
-    font-size: ;
-}
-.section5 body p{
-
 }
 .section5 .body .content{
     display: flex;
@@ -370,10 +393,10 @@ header .trusted-by .other-logos{
 }
 .section5 body .content i{
 }
-/* Section 6 */
-.section6{
-    font-family: ;
+.section5 img{
+    display: none;
 }
+/* Section 6 */
 .section6 > div > p{
     font-size: 2.3rem;
 }
@@ -408,6 +431,9 @@ header .trusted-by .other-logos{
     color:var(--letter-white);
 }
 /* Sectio 7 */
+.section7 .image{
+    background: url(images/find-great-work.webp) no-repeat center center/ cover;
+}
 .section7 .main{
     width: 100%;
     padding: 2px 15px 25px;
@@ -527,10 +553,19 @@ header .trusted-by .other-logos{
 .section8 .carousels .card3{
     background-color: #001e00;
     align-items: center;
-    justify-content: space-around;
 }
-.section8 .carousels .card3 div{
+.section8 .carousels .card3 .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.section8 .carousels .card3 .main div{
     width: 100%;
+}
+.section8 .carousels .card3 .image{
+    display: none;
 }
 .section8 .carousels .card3 p{
     text-align: center;
@@ -569,25 +604,20 @@ header .trusted-by .other-logos{
     flex-shrink: 0;
     font-size: 1.5rem;
     color: var(--letter-light);
+    margin-bottom: 25px;
 }
-.section9 .content{
-    display: flex;
-    justify-content: flex-start;
-    gap: 60px;
-    margin-top: 25px;
-    font-size: 1.03rem;
+.section9 .content1{
+    display: inline-flex;
+    gap: 15px;
+    flex-direction: column;
+    margin-right: 60px;
 }
-.section9 .content .content1{
-    display: flex;
+.section9 .content2{
+    display: inline-flex;
     gap: 15px;
     flex-direction: column;
 }
-.section9 .content .content2{
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-}
-.section9 .content a{
+.section9 a{
     color: #5e6d7b;
 }
 /* Footer */
@@ -665,4 +695,264 @@ footer .footer-menu{
 footer .footer-menu .menu{
     display: flex;
     flex-direction: column;
+}
+
+/* /////////////////////////////////////////////////////////////////// */
+/* Media Queries */
+
+@media screen and (max-width: 699px){
+    .section7 .image{
+        height: 420px;
+    }
+}
+/* For Ipad */
+@media screen and (min-width:700px) {
+    header .intro{
+        padding: 90px 25px;
+    }
+    header .intro div:nth-child(1){
+        width: 50%;
+    }
+    header .intro h2{
+        font-size: 4.5rem;
+    }
+    header .intro .img{
+        display: block;
+        margin-top: 50px;
+        width: 50%;
+
+    }
+    header .intro .img img{
+        width: 100%;
+    }
+    header .trusted-by{
+        padding: 0 25px;
+    }
+    header .trusted-by p{
+        font-size: larger;
+    }
+    header .trusted-by .other-logos img{
+        width: 12%;
+    }
+    .section1, .section2, .section3, .section8, .section9{
+        padding: 0 35px;
+        /* font-size: larger; */
+    }
+    .sec1-header h2{
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .sec1-buttons{
+        width: 60%;
+        font-size: larger;
+    }
+    .sec1-buttons .sign-up{
+        display: block;
+    }
+    .sec1-buttons .hire{
+        width: 50%;
+    }
+    .section2{
+        padding-bottom: 45px;
+    }
+    .section2 .sec2-header h2{
+        font-size: 3rem;
+    }
+    .section2 .sec2-body{
+        justify-content: space-between;
+    }
+    .section2 .sec2-body .sec2-list{
+        width: 48%;
+    }
+    .section2 .sec2-body .show-more{
+        display: none;
+    }
+    .section3{
+        background-color: #13544e;
+        padding: 35px 0 35px 45px;
+        margin: 0 35px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .section3 img{
+        order: 2;
+        width: 30%;
+    }
+    .section3 > div{
+        width: 65%;
+    }
+    .section4{
+        background: url(https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/c_scale/brontes/delivery-models/find-talent-2x.jpg) no-repeat top/ cover;
+        margin:45px 35px;
+        border-radius: 10px;
+        padding: 25px;
+    }
+    .section4 .header p{
+        width: 50%;
+    }
+    .section4 .cards .card{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 15px;
+    }
+    .section4 .cards .card .top{
+        font-size: 1.6rem;
+    }
+    section.merged{
+        z-index: -2;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+        margin: 45px 35px;
+    }
+    .section5{
+        background-color: #f2f7f2;
+        margin: 0;
+        border-radius: 10px;
+        flex-basis: 800px;
+    }
+    .section5 h2{
+        width: 90%;
+        font-size: 3.5rem;
+    }
+    .section5 .content{
+        width: 50%;
+        font-size: 1.3rem;
+    }
+    .section5 .content p{
+        font-size: 1.8rem;
+    }
+    .section5 .body img{
+        display: block;
+        position: absolute;
+        top: 15%;
+        left: 33%;
+    }
+    .section6{
+        margin: 0;
+    }
+    .section6 > div:nth-child(1){
+        border-radius: 10px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .section6 > div:nth-child(2){
+        display: none;
+    }
+    .section7{
+        margin: 0 35px;
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+    }
+    .section7 .image{
+        width: 45%;
+    }
+    .section7 .main{
+        width: 55%;
+        border-radius: 0 10px 10px 0;
+    }
+    .section7 .main h2{
+        font-size: 5rem;
+        margin: 25px 0;
+    }
+    .section8 h2{
+        font-size: 5rem;
+    }
+    .section8 .carousels .common{
+        width: 47%;
+        height: 590px;
+    }
+    .section8 .carousels .common .results{
+        margin-top: 5rem;
+    }
+    .section8 .support-ukraine{
+        padding: 1px 25px 45px 25px;
+        margin-bottom: 4rem;
+    }
+    .section8 .support-ukraine h2{
+        font-size: 3rem;
+        margin: 35px 0 7px 0;
+    }
+    .section8 .support-ukraine p{
+        width: 60%;
+        margin-bottom: 50px;
+    }
+    .section8 .support-ukraine a{
+        padding: 10px 25px;
+        font-size: larger;
+        background-color: white;
+        border-radius: 25px;
+        border: 2px solid var(--button-green);
+        color: var(--button-green);
+    }
+    .section9{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 60px;
+    }
+    .section9 .overflow{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .section9 .overflow div{
+        font-size: 2.3rem;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+    .section9 .content1{
+        margin-right: 0;
+    }
+    .section9 a{
+        font-size: 1.7rem;
+    }
+    footer{
+        margin: 30px;
+    }
+}
+
+/* For Laptop Screens */
+
+@media screen and (min-width:1000px){
+    .section8 .carousels .common{
+        /* flex-shrink: 1; */
+    }
+}
+@media screen and (min-width:1200px){
+    header .intro, header .trusted-by, .section1, .section2{
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    .section3, .section4, .section7, .section8, .section9{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    section.merged{
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .section8 .carousels .common{
+        padding: 40px;
+    }
+    .section8 .carousels .card3 div{
+        width: 40%;
+    }
+}
+@media screen and (min-width:1400px){
+    header .intro, header .trusted-by, .section1, .section2{
+        padding-left: 130px;
+        padding-right: 130px;
+    }
+    .section3, .section4, .section7, .section8, .section9{
+        margin-left: 130px;
+        margin-right: 130px;
+    }
 }
