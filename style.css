@@ -1019,19 +1019,27 @@ footer .footer-menu .menu{
         display: none;
     }
     /* Big Screen */
+    header nav{
+        padding-left: 25px;
+    }
     header .bigScreen-menu{
         display: block;
-        margin-left: 20px;
+        margin-left: 10px;
         display: flex;
         align-items: baseline;
         flex-shrink: 0;
         gap: 30px;
     }
-    header > .sub-menu > .top{
+    header .sub-menu > .top{
         display: flex;
         align-items: baseline;
+        gap: 10px;
+        font-size: 0.9rem;
     }
-    header .bigScreen-menu .sub{
+    header .sub-menu > .top p{
+        font-size: 1rem;
+    }
+    header .sub-menu .sub{
         display: none;
     }
 }
