@@ -26,9 +26,11 @@ body{
     margin: 0;
     padding: 0;
 }
+/* JS classes */
 .hidden{
     overflow: hidden;
 }
+/* *********************** */
 header nav{
     position: fixed;
     width: 100%;
@@ -1014,23 +1016,36 @@ footer .footer-menu .menu{
 /* For Laptop Screens */
 
 @media screen and (min-width:1000px){
-    .mobile-nav .hamburger{
-        display: none;
+    header nav{
+        height: 75px;
+        border-bottom: 1px solid #d9d9d9;
     }
-    .mobile-nav input{
+    header nav .logo{
+        width: 100px;
+        margin-left: 0;
+    }
+    .mobile-nav{
         display: none;
     }
     /* Big Screen */
     header nav{
         padding-left: 25px;
     }
+    header .bigScreen-nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
     header .bigScreen-menu{
-        display: block;
-        margin-left: 10px;
+        margin-left: 25px;
         display: flex;
         align-items: baseline;
         flex-shrink: 0;
-        gap: 30px;
+        gap: 20px;
+    }
+    header .bigScreen-menu > div a{
+        color: black;
     }
     header .bigScreen-menu .sub-menu > .top{
         display: flex;
@@ -1046,11 +1061,32 @@ footer .footer-menu .menu{
     }
 
     /* Search bar div */
-    header .bigScreen-nav .dropdown{
+    .mobile-nav .sign-search{
         display: none;
     }
+    header .bigScreen-nav .sign-search{
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+    }
+    
+    header .bigScreen-nav .sign-search > i{
+        font-size: larger;
+    }
+    header .bigScreen-nav .sign-up{
+        color: var(--letter-white);
+        background-color: var(--button-green);
+        padding: 13px 30px;
+        border-radius: 30px;
+        font-size: 0.95rem;
+    }
+    header .bigScreen-nav .search-drop{
+        display: none;
+    }
+    
 }
 @media screen and (min-width:1200px){
+    
     header .intro, header .trusted-by, .section1, .section2{
         padding-left: 60px;
         padding-right: 60px;
@@ -1130,6 +1166,35 @@ footer .footer-menu .menu{
         height: 9rem;
     }
 }
+@media screen and (min-width: 1225px) {
+    header .bigScreen-nav .sign-search > i{
+        display: none;
+    }
+    header .bigScreen-nav .search-drop .option{
+        display: none;
+    }
+    header .bigScreen-nav .search-drop{
+        width: 350px;
+        border: 2px solid #e9e9e9;
+        padding: 10px 15px;
+        border-radius: 40px;
+        display: flex;
+    }
+    header .bigScreen-nav .search-drop .search{
+        width: 290px;
+    }
+    header .bigScreen-nav .search-drop .search input{
+        width: 200px;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+    }
+    header .bigScreen-nav .search-drop .view-box{
+        width: 100px;
+        border-left: 1px solid #e9e9e9;
+    }
+}
+
 @media screen and (min-width:1400px){
     header .intro, header .trusted-by, .section1, .section2{
         padding-left: 130px;
