@@ -181,7 +181,9 @@ header .search-page .top-list p{
     margin-bottom: -2px;
     /* border-bottom: 3px solid #22e222; */
 }
-
+header .header-links{
+    display: none;
+}
 /* Header Intro */
 
 header .intro{
@@ -733,14 +735,14 @@ footer .footer-menu .menu{
 /* For Ipad */
 @media screen and (min-width:700px) {
     header .intro{
-        padding: 90px 25px;
+        padding: 70px 25px 25px;
     }
     header .intro div:nth-child(1){
-        width: 50%;
+        width: 80%;
     }
     header .intro h2{
         font-size: 5.5rem;
-        width: 70%;
+        width: 100%;
     }
     header .intro p{
         font-size: 1.6rem;
@@ -749,8 +751,8 @@ footer .footer-menu .menu{
     header .intro .img{
         display: block;
         margin-top: 50px;
-        width: 50%;
-        max-width: 500px;
+        width: 70%;
+        /* max-width: 500px; */
     }
     header .intro .img img{
         width: 100%;
@@ -1083,6 +1085,42 @@ footer .footer-menu .menu{
     header .bigScreen-nav .search-drop{
         display: none;
     }
+
+    /* Header Links */
+    header .header-links{
+        position: fixed;
+        top: 75px;
+        display: flex;
+        align-items: baseline;
+        padding-left: 25px;
+        width: 100%;
+        background-color: white;
+    }
+    header .header-links a, header .header-links .more{
+        padding: 12px 10px;
+    }
+    header .header-links a{
+        color: black;
+    }
+    header .header-links a:hover{
+        color: var(--letter-green);
+        text-decoration: underline;
+    }
+    header .header-links .more{
+        display: flex; 
+        align-items: baseline; 
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+    header .header-links .more p{
+        font-size: 1rem;
+    }
+    header .intro{
+        padding-top: 140px;
+    }
+
+    /* BigScreenMenu Hover divs */
+
     
 }
 @media screen and (min-width:1200px){
