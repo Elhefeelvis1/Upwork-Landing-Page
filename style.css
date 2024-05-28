@@ -25,6 +25,7 @@ p{
 body{
     margin: 0;
     padding: 0;
+    z-index: -2;
 }
 /* JS classes */
 .hidden{
@@ -1018,9 +1019,12 @@ footer .footer-menu .menu{
 /* For Laptop Screens */
 
 @media screen and (min-width:1000px){
+    /* *{
+        z-index: -2;
+    } */
     header nav{
         height: 75px;
-        border-bottom: 1px solid #d9d9d9;
+        border-bottom: 1px solid #e7e7e7;
     }
     header nav .logo{
         width: 100px;
@@ -1044,7 +1048,6 @@ footer .footer-menu .menu{
         display: flex;
         align-items: baseline;
         flex-shrink: 0;
-        gap: 20px;
     }
     header .bigScreen-menu > div a{
         color: black;
@@ -1054,14 +1057,168 @@ footer .footer-menu .menu{
         align-items: baseline;
         gap: 10px;
         font-size: 0.9rem;
+        height: 100%;
+        padding: 15px 12px;
+        cursor: pointer;
     }
     header .bigScreen-menu .sub-menu > .top p{
         font-size: 1rem;
     }
-    header .sub-menu .sub{
+    header .bigScreen-menu > div > a{
+        margin-left: 10px;
+    }
+
+    /* **** Dropdown Hover */
+    header .bigScreen-menu .sub-menu.talent .top:hover + .under{
+        display: flex;
+    }
+    header .bigScreen-menu .sub-menu.work .top:hover + .under{
+        display: flex;
+    }
+    header .bigScreen-menu .sub-menu.upwork .top:hover + .under{
+        display: flex;
+    }
+    header .bigScreen-menu .sub-menu.new .top:hover + .under{
+        display: flex;
+    }
+
+    header .bigScreen-menu .sub-menu .under:hover{
+        display: flex;
+    }
+    /* ******** Big Screen Nav Dropdowns ********* */
+    
+    header .sub-menu .under{
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px 25px 70px 25px;
+        background-color: white;
+        box-shadow: 0 0 5px rgba(150, 149, 149, 0.4);
+    }
+
+    /* ********** Find talent ********** */
+    header .sub-menu .under1{
+        display: none;
+    }
+    header .sub-menu .under1 .sub1{
+        min-width: 35%;
+        padding: 0 35px 40px 0;
+        border-right: 1px #cdcdcd solid;
+    }
+    header .sub-menu .under1 .sub-sel{
+        padding: 5px 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .sub-menu .under1 .sub-sel:hover{
+        background-color: #e7e7e7;
+    }
+    header .sub-menu .under1 .para .top{
+        font-size: 1rem;
+    }
+    header .sub-menu .under1 .para .bottom{
+        font-size: 1rem;
+        color: var(--letter-green);
+    }
+    header .sub-menu .under .sub2 .talent{
+        padding: 0 25px;
+    }
+    header .sub-menu .under .sub2 .catalog{
+        display: none;
+    }
+    header .sub-menu .under .sub2 .consultations{
         display: none;
     }
 
+    /* ****** Find Work &&&& What's New ******* */
+    header .sub-menu .under4{
+        display: none;
+        padding: 35px 30px;
+        justify-content: flex-start;
+        gap: 45px;
+    }
+    header .sub-menu .under4 .sub-sel{
+        height: fit-content;
+        width: 20%;
+        padding: 10px 25px;
+        border-radius: 10px;
+    }
+    header .sub-menu .under4 .sub-sel:hover{
+        background-color: rgb(196, 195, 195);
+    }
+    header .sub-menu .under4 .sub-sel .top{
+        font-size: 1rem;
+    }
+    header .sub-menu .under4 .sub-sel .bottom{
+        font-size: 0.9rem;
+        color: var(--letter-dark);
+        line-height: 25px;
+    }
+
+    /* ********* Why Upwork  ************ */
+    header .sub-menu .under3{
+        justify-content: flex-start;
+    }
+    header .sub-menu .under3 .sub1{
+        min-width: 500px;
+        padding: 0 40px 0 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        gap: 25px;
+        height: fit-content;
+    }
+    header .sub-menu .under3 .sub-sel{
+        padding: 5px 25px;
+        border-radius: 10px;
+    }
+    header .sub-menu .under3 .sub-sel:hover{
+        background-color: rgb(196, 195, 195);
+    }
+    header .sub-menu .under3 .sub-sel .top{
+        font-size: 1rem;
+    }
+    header .sub-menu .under3 .sub-sel .bottom{
+        font-size: 0.9rem;
+        color: var(--letter-dark);
+        line-height: 25px;
+    }
+    header .sub-menu .under3 .sub2{
+        
+    }
+    header .sub-menu .under3 .sub2 > p{
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    header .sub-menu .under3 .sub2 > div{
+        border: 1px rgb(196, 195, 195) solid;
+        padding: 15px 95px 15px 25px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    header .sub-menu .under3 .sub2 > div:hover{
+        background-color: rgb(196, 195, 195);
+    }
+    header .sub-menu .under3 .sub2 > div > span{
+        color: var(--letter-dark);
+        font-size: 0.9rem;
+    }
+    header .sub-menu .under3 .sub2 > div > p{
+        font-size: 1rem;
+        color: var(--letter-dark);
+        margin-bottom: 0;
+    }
+    header .sub-menu .under3 .sub2 a{
+        color: var(--letter-green);
+        display: block;
+        padding-top: 25px;
+        text-decoration: underline;
+    }
+    header .sub-menu .under3 .sub2 a:hover{
+        text-decoration: none;
+    }
+    
     /* Search bar div */
     .mobile-nav .sign-search{
         display: none;
@@ -1088,6 +1245,7 @@ footer .footer-menu .menu{
 
     /* Header Links */
     header .header-links{
+        /* z-index: -1; */
         position: fixed;
         top: 75px;
         display: flex;
@@ -1102,7 +1260,7 @@ footer .footer-menu .menu{
     header .header-links a{
         color: black;
     }
-    header .header-links a:hover{
+    header .header-links > a:hover{
         color: var(--letter-green);
         text-decoration: underline;
     }
@@ -1112,8 +1270,42 @@ footer .footer-menu .menu{
         gap: 10px;
         font-size: 0.9rem;
     }
+    header .header-links .more:hover ~ .dropdown{
+        display: flex;
+    }
     header .header-links .more p{
         font-size: 1rem;
+    }
+    /* ****** I will return!!!!!!!! */
+    header .header-links .dropdown{
+        display: none;
+        flex-direction: column;
+        position: inherit;
+        top: 150px;
+        left: 580px;
+        width: 280px;
+        background-color: white;
+        box-shadow: 0 0 10px rgb(189, 189, 189);
+        border-radius: 8px;
+        padding: 5px 0;
+    }
+    header .header-links .dropdown:hover{
+        display: flex;
+    }
+    header .header-links .dropdown div{
+        width: 20px;
+        border-left: 20px rgba(255, 255, 255, 0) solid;
+        border-right: 20px rgba(255, 255, 255, 0) solid;
+        border-bottom: 20px white solid;
+        margin-left: auto;
+        margin-right: 20px;
+        margin-top: -23px;
+    }
+    header .header-links .dropdown a{
+        padding-left: 15px;
+    }
+    header .header-links .dropdown a:hover{
+        background-color: rgba(186, 186, 186, 0.3);
     }
     header .intro{
         padding-top: 140px;
