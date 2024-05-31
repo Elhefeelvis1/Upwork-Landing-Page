@@ -41,6 +41,7 @@ header nav{
     display: flex;
     align-items: center;
     border-bottom: 2px solid #d9d9d9;
+    z-index: 1;
 }
 header nav .logo{
     width: 140px;
@@ -190,14 +191,16 @@ header .header-links{
 header .intro{
     padding: 70px 15px 0;
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     gap: 25px;
 }
 header .intro div:nth-child(1){
     width: 70%;
+    max-width: 600px;
 }
 header .intro .img{
     display: none;
+    max-width: 500px;
 }
 header .intro h2{
     font-size: 3.5rem;
@@ -592,7 +595,7 @@ header .trusted-by .other-logos img{
     background-color: #f7faf7;
     border-radius: 25px;
     padding:1px 25px 35px 25px;
-    position: relative;
+    /* position: relative; */
 }
 .section8 .support-ukraine h2{
     width: 100%;
@@ -613,7 +616,6 @@ header .trusted-by .other-logos img{
     position: absolute;
     right: 40px;
     bottom: 0;
-
 }
 /* Section 9 */
 .section9{
@@ -1052,6 +1054,9 @@ footer .footer-menu .menu{
     header .bigScreen-menu > div a{
         color: black;
     }
+    header .bigScreen-menu > div a:hover{
+        color: var(--letter-green);
+    }
     header .bigScreen-menu .sub-menu > .top{
         display: flex;
         align-items: baseline;
@@ -1069,16 +1074,7 @@ footer .footer-menu .menu{
     }
 
     /* **** Dropdown Hover */
-    header .bigScreen-menu .sub-menu.talent .top:hover + .under{
-        display: flex;
-    }
-    header .bigScreen-menu .sub-menu.work .top:hover + .under{
-        display: flex;
-    }
-    header .bigScreen-menu .sub-menu.upwork .top:hover + .under{
-        display: flex;
-    }
-    header .bigScreen-menu .sub-menu.new .top:hover + .under{
+    header .bigScreen-menu .sub-menu .top:hover + .under{
         display: flex;
     }
 
@@ -1088,6 +1084,7 @@ footer .footer-menu .menu{
     /* ******** Big Screen Nav Dropdowns ********* */
     
     header .sub-menu .under{
+        z-index: 10;
         display: none;
         position: absolute;
         top: 75px;
@@ -1099,11 +1096,9 @@ footer .footer-menu .menu{
     }
 
     /* ********** Find talent ********** */
-    header .sub-menu .under1{
-        display: none;
-    }
     header .sub-menu .under1 .sub1{
-        min-width: 35%;
+        width: 35%;
+        max-width: 480px;
         padding: 0 35px 40px 0;
         border-right: 1px #cdcdcd solid;
     }
@@ -1111,8 +1106,9 @@ footer .footer-menu .menu{
         padding: 5px 25px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-    header .sub-menu .under1 .sub-sel:hover{
+    header .sub-menu .under1 .sub-sel.active{
         background-color: #e7e7e7;
     }
     header .sub-menu .under1 .para .top{
@@ -1122,13 +1118,88 @@ footer .footer-menu .menu{
         font-size: 1rem;
         color: var(--letter-green);
     }
-    header .sub-menu .under .sub2 .talent{
-        padding: 0 25px;
+
+    /* Headers in each section of Find Talent */
+    .bigScreen-nav .sub-menu.talent .sub2{
+        padding-left: 75px;
+        width: 100%;
     }
-    header .sub-menu .under .sub2 .catalog{
+    .bigScreen-nav .sub-menu .sub2 > div{
+        flex-direction: column;
+        gap: 25px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .main p{
+        font-size: 1.2rem;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .main span{
+        font-size: 1rem;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .main a{
+        font-size: 1rem;
+        color: var(--letter-green);
+        text-decoration: underline;
+        margin-top: 25px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .main a:hover{
+        text-decoration: none;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side{
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .side > div{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Talent */
+    .bigScreen-nav .sub-menu .sub2 .talent{
+        display: flex;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side > div{
+        gap: 0;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side a{
+        padding: 8px 15px;
+        color: rgb(95, 95, 95);
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side a:hover{
+        background-color: rgb(173, 172, 172);
+        border-radius: 8px;
+    }
+    /* Catalog && Consultations */
+    .bigScreen-nav .sub-menu.talent .sub2 .catalog{
         display: none;
     }
-    header .sub-menu .under .sub2 .consultations{
+    .bigScreen-nav .sub-menu.talent .sub2 .catalog .side, .bigScreen-nav .sub-menu.talent .sub2 .consultations .side{
+        display: flex;
+        justify-content: space-between;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .sidebox{
+        width: 350px;
+        height: 80px;
+        border: 1px solid var(--letter-light);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .sidebox:hover{
+        background-color: rgb(201, 201, 201);
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .sidebox img{
+        width: 30%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+    /* Consultations */
+    .bigScreen-nav .sub-menu.talent .sub2 .consultations{
         display: none;
     }
 
@@ -1245,7 +1316,6 @@ footer .footer-menu .menu{
 
     /* Header Links */
     header .header-links{
-        /* z-index: -1; */
         position: fixed;
         top: 75px;
         display: flex;
@@ -1316,7 +1386,63 @@ footer .footer-menu .menu{
     
 }
 @media screen and (min-width:1200px){
-    
+    /* Nav */
+    /* Talent */
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side{
+        flex-direction: column;
+        gap: 10px;
+        width: 38%;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side > div{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .main{
+        width: 40%;
+        max-width: 400px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2{
+        padding-left: 75px;
+        width: 100%;
+    }
+    .bigScreen-nav .sub-menu .sub2 > div{
+        flex-direction: row;
+        gap: 90px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side a{
+        padding: 10px 15px;
+        color: rgb(95, 95, 95);
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .talent .side a:hover{
+        background-color: rgb(210, 209, 209);
+        border-radius: 8px;
+    }
+
+    /* Catalog && Consultations */
+    .bigScreen-nav .sub-menu.talent .sub2 .main{
+        max-width: 230px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .catalog .side, .bigScreen-nav .sub-menu.talent .sub2 .consultations .side{
+        gap: 20px;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .side > div{
+        flex-direction: row;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .sidebox{
+        width: 200px;
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .bigScreen-nav .sub-menu.talent .sub2 .sidebox img{
+        width: 100%;
+        height: 70%;
+        border-radius: 10px 10px 0 0;
+    }
+    /* ********** Nav Ends ********** */
     header .intro, header .trusted-by, .section1, .section2{
         padding-left: 60px;
         padding-right: 60px;
@@ -1400,8 +1526,40 @@ footer .footer-menu .menu{
     header .bigScreen-nav .sign-search > i{
         display: none;
     }
-    header .bigScreen-nav .search-drop .option{
+    header .bigScreen-nav .search-drop .view-box{
+        width: 100px;
+        border-left: 1px solid #e9e9e9;
+    }
+    header .bigScreen-nav .search-drop .dropdown{
         display: none;
+        position: absolute;
+        top: 70px;
+        right: 150px;
+        background-color: white;
+        padding: 5px 0;
+        width: 250px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(181, 180, 180);
+    }
+    header .bigScreen-nav .search-drop .dropdown.active{
+        display: block;
+    }
+    header .bigScreen-nav .search-drop .dropdown .option{
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        padding: 10px 5px 10px 20px;
+    }
+    header .bigScreen-nav .search-drop .dropdown .option:hover{
+        background-color: rgb(236, 236, 236);
+    }
+    header .bigScreen-nav .search-drop .option div p{
+        font-size: 1rem;
+        margin: 0 0 3px 0;
+    }
+    header .bigScreen-nav .search-drop .option div span{
+        font-size: 0.85rem;
+        margin: 0 0;
     }
     header .bigScreen-nav .search-drop{
         width: 350px;
@@ -1418,10 +1576,6 @@ footer .footer-menu .menu{
         outline: none;
         border: none;
         font-size: 1rem;
-    }
-    header .bigScreen-nav .search-drop .view-box{
-        width: 100px;
-        border-left: 1px solid #e9e9e9;
     }
 }
 
