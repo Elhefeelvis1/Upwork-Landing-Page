@@ -669,6 +669,7 @@ header .trusted-by .other-logos img{
     gap: 15px;
     flex-direction: column;
     margin-right: 60px;
+    margin-bottom: 10px;
 }
 .section9 .content2{
     display: inline-flex;
@@ -994,6 +995,8 @@ footer .footer-menu .menu a{
     }
     .section9 .content1{
         margin-right: 0;
+        margin-bottom: 0;
+        
     }
     .section9 a{
         font-size: 1.7rem;
