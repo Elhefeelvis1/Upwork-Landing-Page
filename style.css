@@ -183,6 +183,9 @@ header .side-bar .sign-up a{
 .mobile-nav .sign-search i{
     font-size: 1.4rem;
 }
+.mobile-nav .sign-search a{
+    color: black;
+}
 .mobile-nav .sign-search a.active{
     background-color: var(--button-green);
     padding: 13px 30px;
