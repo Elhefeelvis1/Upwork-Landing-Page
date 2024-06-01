@@ -8,8 +8,7 @@ function inputClick(){
 
 for(i = 0; i < sideBar_acc.length; i++){
     sideBar_acc[i].addEventListener('click', function(){
-        console.log('active');
-        this.classList.toggle('active');
+        this.classList.toggle('active')
     })
 }
 
@@ -48,8 +47,31 @@ $('.bigScreen-nav .search-drop .dropdown .option').click(function(){
 
     switch (true){
         case $(this).hasClass('talent'):
-            let talent = $('.bigScreen-nav .search-drop .dropdown .option .talent').text()
-            console.log(talent)
-            $('header .bigScreen-nav .search-drop .view-box p').text(talent)
+            let talent = $('.bigScreen-nav .search-drop .dropdown .option .talent').text();
+            $('header .bigScreen-nav .search-drop .view-box p').text(talent);
+
+            $('header .bigScreen-nav .search-drop .dropdown').removeClass('active');
+            break;
+        case $(this).hasClass('projects'):
+            let projects = $('.bigScreen-nav .search-drop .dropdown .option .projects').text();
+            $('header .bigScreen-nav .search-drop .view-box p').text(projects);
+
+            $('header .bigScreen-nav .search-drop .dropdown').removeClass('active');
+            break;
+        case $(this).hasClass('jobs'):
+            let jobs = $('.bigScreen-nav .search-drop .dropdown .option .jobs').text();
+            $('header .bigScreen-nav .search-drop .view-box p').text(jobs);
+
+            $('header .bigScreen-nav .search-drop .dropdown').removeClass('active');
+            break;
+    }
+})
+
+// Scroll
+$(document).scroll(function(){
+    if($(document).scrollTop() > 15){
+        $('.mobile-nav .sign-search a').addClass('active');
+    }else{
+        $('.mobile-nav .sign-search a').removeClass('active');
     }
 })

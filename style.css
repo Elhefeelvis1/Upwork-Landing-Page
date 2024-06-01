@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --button-green: #108a00;
     --letter-green: #14a800;
@@ -9,7 +11,7 @@
 }
 *{
     box-sizing: border-box;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "roboto", Helvetica, Arial, sans-serif;
 }
 a{
     text-decoration: none;
@@ -41,7 +43,7 @@ header nav{
     display: flex;
     align-items: center;
     border-bottom: 2px solid #d9d9d9;
-    z-index: 1;
+    z-index: 10;
 }
 header nav .logo{
     width: 140px;
@@ -111,11 +113,16 @@ header .bigScreen-nav{
 .mobile-nav .side-bar .menu-list{
     overflow-y: auto;
     height: calc(100vh - 145px);
+    padding-top: 25px;
 }
 header .side-bar .sub-head{
-    padding: 25px 30px 25px 25px;
+    padding: 35px 30px 35px 25px;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+}
+header .side-bar .sub-head:hover i{
+    color: var(--letter-green);
 }
 header .side-bar .sub.active .sub-sel{
     height: 100%;
@@ -133,10 +140,20 @@ header .side-bar .sub-sel{
     padding-left: 40px;
     height: 0px;
     overflow: hidden;
+    cursor: pointer;
     /* transition: 0.5s; */
 }
-header .side-bar .sub-sel p{
-    font-size: 1.1rem;
+header .side-bar .sub-sel:hover{
+    background-color: #eeeeee;
+}
+header .side-bar .sub-sel:hover .bottom{
+    color: var(--letter-green);
+}
+header .side-bar .sub-sel .top{
+    font-size: 1rem;
+}
+header .side-bar .sub-sel .bottom{
+    font-size: 0.9rem;
 }
 header .side-bar .sign-up{
     width: 100%;
@@ -151,8 +168,8 @@ header .side-bar .sign-up a{
     width: 90%;
     text-align: center;
     background-color: var(--button-green);
-    padding: 8px;
-    border-radius: 35px;
+    padding: 12px 8px;
+    border-radius: 15px;
     color: white;
 }
 /* Side Bar ends */
@@ -165,6 +182,12 @@ header .side-bar .sign-up a{
 
 .mobile-nav .sign-search i{
     font-size: 1.4rem;
+}
+.mobile-nav .sign-search a.active{
+    background-color: var(--button-green);
+    padding: 13px 30px;
+    border-radius: 13px;
+    color: white;
 }
 /* Search bar page */
 header .search-page{
@@ -218,7 +241,7 @@ header .intro a{
     font-size: 1.1rem;
     background-color: var(--button-green);
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 15px;
     color: var(--letter-white);
 }
 header .trusted-by{
@@ -238,6 +261,7 @@ header .trusted-by .other-logos img{
 /* Section 1 */
 .section1{
     padding:0 15px;
+    padding-top: 25px;
 }
 .sec1-header h2{
     font-size: 2.3rem;
@@ -261,6 +285,7 @@ header .trusted-by .other-logos img{
     display: block;
 }
 .sec1-buttons{
+    padding-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -270,7 +295,7 @@ header .trusted-by .other-logos img{
     display: none;
     padding: 10px;
     background-color: var(--button-green);
-    border-radius: 25px;
+    border-radius: 15px;
     color: white;
     width: 50%;
     text-align: center;
@@ -282,7 +307,7 @@ header .trusted-by .other-logos img{
     padding: 10px;
     text-decoration: none;
     color: var(--button-green);
-    border-radius: 30px;
+    border-radius: 15px;
     border: 2px solid var(--button-green);
     text-align: center;
 }
@@ -595,7 +620,7 @@ header .trusted-by .other-logos img{
     background-color: #f7faf7;
     border-radius: 25px;
     padding:1px 25px 35px 25px;
-    /* position: relative; */
+    position: relative;
 }
 .section8 .support-ukraine h2{
     width: 100%;
@@ -615,7 +640,7 @@ header .trusted-by .other-logos img{
 .section8 .support-ukraine img{
     position: absolute;
     right: 40px;
-    bottom: 0;
+    bottom: 0px;
 }
 /* Section 9 */
 .section9{
@@ -723,8 +748,13 @@ footer .footer-menu{
     flex-wrap: wrap;
 }
 footer .footer-menu .menu{
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+footer .footer-menu .menu a{
+    color: white;
 }
 
 /* /////////////////////////////////////////////////////////////////// */
@@ -741,7 +771,7 @@ footer .footer-menu .menu{
         padding: 70px 25px 25px;
     }
     header .intro div:nth-child(1){
-        width: 80%;
+        width: 90%;
     }
     header .intro h2{
         font-size: 5.5rem;
@@ -750,12 +780,6 @@ footer .footer-menu .menu{
     header .intro p{
         font-size: 1.6rem;
         width: 70%;
-    }
-    header .intro .img{
-        display: block;
-        margin-top: 50px;
-        width: 70%;
-        /* max-width: 500px; */
     }
     header .intro .img img{
         width: 100%;
@@ -1017,7 +1041,33 @@ footer .footer-menu .menu{
         color: white;
     }
 }
-
+@media screen and (min-width:769px){
+    header .intro .img{
+        display: block;
+        margin-top: 50px;
+        width: 70%;
+        /* max-width: 500px; */
+    }
+}
+@media screen and (min-width:869px){
+    .section1{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding-top: 30px;
+    }
+    .section1 .animation{
+        width: 60%;
+    }
+    .sec1-body{
+        width: 70%;
+    }
+    .sec1-body .sec1-buttons{
+        width: 100%;
+        margin-top: 25px;
+    }
+    
+}
 /* For Laptop Screens */
 
 @media screen and (min-width:1000px){
@@ -1084,7 +1134,6 @@ footer .footer-menu .menu{
     /* ******** Big Screen Nav Dropdowns ********* */
     
     header .sub-menu .under{
-        z-index: 10;
         display: none;
         position: absolute;
         top: 75px;
@@ -1307,7 +1356,7 @@ footer .footer-menu .menu{
         color: var(--letter-white);
         background-color: var(--button-green);
         padding: 13px 30px;
-        border-radius: 30px;
+        border-radius: 15px;
         font-size: 0.95rem;
     }
     header .bigScreen-nav .search-drop{
@@ -1323,6 +1372,7 @@ footer .footer-menu .menu{
         padding-left: 25px;
         width: 100%;
         background-color: white;
+        z-index: 2;
     }
     header .header-links a, header .header-links .more{
         padding: 12px 10px;
@@ -1526,9 +1576,56 @@ footer .footer-menu .menu{
     header .bigScreen-nav .sign-search > i{
         display: none;
     }
+    header .bigScreen-nav .search-drop{
+        width: 370px;
+        border: 2px solid #e9e9e9;
+        border-radius: 40px;
+        display: flex;
+    }
+    header .bigScreen-nav .search-drop .search{
+        width: 290px;
+        border-radius: 40px;
+        padding: 5px 15px;
+    }
+    header .bigScreen-nav .search-drop .search input{
+        width: 200px;
+        padding: 5px 0;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    /* Hover animations */
+    header .bigScreen-nav .search-drop:hover{
+        background-color: #e9e9e9;
+    }
+    header .bigScreen-nav .search-drop .search:hover{
+        background-color: #faf8f8;
+    }
+    header .bigScreen-nav .search-drop .view-box:hover{
+        background-color: #faf8f8;
+    }
+    /* Hover Ends*************** */
+
+    header .bigScreen-nav .search-drop .line{
+        width: 1px;
+        height: 30px;
+        background-color: #e9e9e9;
+        align-self: center;
+    }
     header .bigScreen-nav .search-drop .view-box{
-        width: 100px;
-        border-left: 1px solid #e9e9e9;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+    header .bigScreen-nav .search-drop .view-box p{
+        font-size: 1rem;
+        margin: 0;
     }
     header .bigScreen-nav .search-drop .dropdown{
         display: none;
@@ -1560,22 +1657,6 @@ footer .footer-menu .menu{
     header .bigScreen-nav .search-drop .option div span{
         font-size: 0.85rem;
         margin: 0 0;
-    }
-    header .bigScreen-nav .search-drop{
-        width: 350px;
-        border: 2px solid #e9e9e9;
-        padding: 10px 15px;
-        border-radius: 40px;
-        display: flex;
-    }
-    header .bigScreen-nav .search-drop .search{
-        width: 290px;
-    }
-    header .bigScreen-nav .search-drop .search input{
-        width: 200px;
-        outline: none;
-        border: none;
-        font-size: 1rem;
     }
 }
 
