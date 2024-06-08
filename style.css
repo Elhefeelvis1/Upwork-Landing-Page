@@ -417,6 +417,10 @@ header .trusted-by .other-logos img{
     padding: 15px;
     color: var(--letter-white);
 }
+.section4 .cards .card:hover{
+    background-color: white;
+    color: var(--letter-green);
+}
 
 .section4 .cards .card .sub{
     text-align: end;
@@ -888,7 +892,9 @@ footer .footer-menu .menu a{
         background-color: #f2f7f2;
         margin: 0;
         border-radius: 10px;
-        flex-basis: 800px;
+        width: 60%;
+        flex-grow: 1;
+        padding-left: 25px;
     }
     .section5 h2{
         width: 90%;
@@ -904,11 +910,14 @@ footer .footer-menu .menu a{
     .section5 .body img{
         display: block;
         position: absolute;
+        width: 300px;
+        height: 600px;
         top: 15%;
-        left: 33%;
+        left: 35%;
     }
     .section6{
         margin: 0;
+        width: 35%;
     }
     .section6 > div:nth-child(1){
         border-radius: 10px;
@@ -916,6 +925,7 @@ footer .footer-menu .menu a{
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        padding-left: 25px;
     }
     .section6 > div:nth-child(2){
         display: none;
@@ -1098,7 +1108,7 @@ footer .footer-menu .menu a{
         align-items: baseline;
     }
     header .bigScreen-menu{
-        margin-left: 25px;
+        margin-left: 20px;
         display: flex;
         align-items: baseline;
         flex-shrink: 0;
@@ -1115,7 +1125,7 @@ footer .footer-menu .menu a{
         gap: 10px;
         font-size: 0.9rem;
         height: 100%;
-        padding: 15px 12px;
+        padding: 15px 10px;
         cursor: pointer;
     }
     header .bigScreen-menu .sub-menu > .top p{
@@ -1432,10 +1442,27 @@ footer .footer-menu .menu a{
     header .intro{
         padding-top: 140px;
     }
-
-    /* BigScreenMenu Hover divs */
-
-    
+    .section5 h2{
+        font-size: 4.8rem;
+        margin-bottom: 15px;
+    }
+    .section5 .body img{
+        top: 5%;
+        left: 52%;
+    }
+    .section5 .content{
+        width: 80%;
+    }
+    .section6 > div:nth-child(1) {
+        padding-bottom: 50px;
+    }
+    .section6 > div > p {
+        margin-bottom: 0;
+        font-size: 2.5rem;
+    }
+    .section6 .body span {
+        width: 90%;
+    }
 }
 @media screen and (min-width:1200px){
     /* Nav */
@@ -1499,6 +1526,9 @@ footer .footer-menu .menu a{
         padding-left: 60px;
         padding-right: 60px;
     }
+    header .intro .img{
+        margin-right: 100px;
+    }
     .section2 .sec2-header h2 {
         font-size: 4rem;
         margin-bottom: 5px;
@@ -1541,7 +1571,7 @@ footer .footer-menu .menu a{
         font-size: 1.5rem;
     }
     .section4 .cards .card .top{
-        font-size: 2.3rem;
+        font-size: 2.2rem;
     }
     .section4 .cards .card .sub{
         font-size: 1.3rem;
@@ -1574,23 +1604,23 @@ footer .footer-menu .menu a{
         height: 9rem;
     }
 }
-@media screen and (min-width: 1225px) {
+@media screen and (min-width: 1240px) {
     header .bigScreen-nav .sign-search > i{
         display: none;
     }
     header .bigScreen-nav .search-drop{
-        width: 370px;
+        width: 300px;
         border: 2px solid #e9e9e9;
         border-radius: 40px;
         display: flex;
     }
     header .bigScreen-nav .search-drop .search{
-        width: 290px;
+        width: 70%;
         border-radius: 40px;
         padding: 5px 15px;
     }
     header .bigScreen-nav .search-drop .search input{
-        width: 200px;
+        width: 80%;
         padding: 5px 0;
         outline: none;
         border: none;
@@ -1617,7 +1647,7 @@ footer .footer-menu .menu a{
         align-self: center;
     }
     header .bigScreen-nav .search-drop .view-box{
-        width: 120px;
+        width: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1660,6 +1690,30 @@ footer .footer-menu .menu a{
         font-size: 0.85rem;
         margin: 0 0;
     }
+    .section5{
+        padding-left: 35px;
+    }
+    .section5 h2{
+        font-size: 5.5rem;
+        width: 100%;
+        margin: 20px;
+    }
+    .section5 .content{
+        width: 70%;
+        font-size: 1.3rem;
+    }
+    .section6 div:nth-child(1){
+        padding-left: 25px;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    header .bigScreen-nav .search-drop{
+    width: 370px;
+    border: 2px solid #e9e9e9;
+    border-radius: 40px;
+    display: flex;
+}
 }
 
 @media screen and (min-width:1400px){
@@ -1667,8 +1721,14 @@ footer .footer-menu .menu a{
         padding-left: 130px;
         padding-right: 130px;
     }
+    header .intro .img{
+        margin-right: 0;
+    }
     .section3, .section4, .section7, .section8, .section9, .merged{
         margin-left: 130px;
         margin-right: 130px;
+    }
+    .section5 h2{
+        width: 85%;
     }
 }
