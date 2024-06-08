@@ -183,6 +183,9 @@ header .side-bar .sign-up a{
 .mobile-nav .sign-search i{
     font-size: 1.4rem;
 }
+.mobile-nav .sign-search a{
+    color: black;
+}
 .mobile-nav .sign-search a.active{
     background-color: var(--button-green);
     padding: 13px 30px;
@@ -670,7 +673,11 @@ header .trusted-by .other-logos img{
     gap: 15px;
     flex-direction: column;
     margin-right: 60px;
+<<<<<<< HEAD
     margin-bottom: 15px;
+=======
+    margin-bottom: 10px;
+>>>>>>> 2e6d82f6a433b64f3ff17cf6c80f41381d73d8e9
 }
 .section9 .content2{
     display: inline-flex;
@@ -1003,6 +1010,10 @@ footer .footer-menu .menu a{
     .section9 .content1{
         margin-right: 0;
         margin-bottom: 0;
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 2e6d82f6a433b64f3ff17cf6c80f41381d73d8e9
     }
     .section9 a{
         font-size: 1.7rem;
@@ -1728,7 +1739,11 @@ footer .footer-menu .menu a{
         margin-left: 130px;
         margin-right: 130px;
     }
+<<<<<<< HEAD
     .section5 h2{
         width: 85%;
     }
 }
+=======
+}
+>>>>>>> 2e6d82f6a433b64f3ff17cf6c80f41381d73d8e9
